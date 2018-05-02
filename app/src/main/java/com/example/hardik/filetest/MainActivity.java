@@ -234,8 +234,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return null;
         }
 
-
-    }
+       @Override
+       protected void onPostExecute(String s) {
+           super.onPostExecute(s);
+           Toast.makeText(MainActivity.this, "Sent !!!!!!!", Toast.LENGTH_SHORT).show();
+       }
+   }
 
     private class Client extends AsyncTask<String,Void,Void> {
         // IF you  are client the you need to connect to hotspot
